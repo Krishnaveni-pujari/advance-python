@@ -1,13 +1,11 @@
 import cv2
 import numpy as np
 
-# Create a white image
 img = np.ones((500, 700, 3), dtype=np.uint8) * 255
 
 drawing = False
 start_x, start_y = -1, -1
 
-# Mouse callback function
 def draw_rectangle(event, x, y, flags, param):
     global drawing, start_x, start_y, img
 
