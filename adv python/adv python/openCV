@@ -1,0 +1,19 @@
+import cv2
+
+# Read image
+image = cv2.imread("sample.jpg")
+
+# Check if image is loaded
+if image is None:
+    print("Image not found!")
+else:
+    # Display image
+    cv2.imshow("Original Image", image)
+
+    # Save image
+    cv2.imwrite("saved_image.jpg", image)
+
+    print("Image saved successfully!")
+
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
